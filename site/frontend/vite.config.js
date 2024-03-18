@@ -12,8 +12,8 @@ export default defineConfig({
         "name":"Acrux Enterprise",
         "short_name":"Acrux",
         "display": "standalone",
-        "background_color": "#071952",
-        "theme_color": "#071952",
+        "background_color": "#331B3F",
+        "theme_color": "#331B3F",
         "icons":[
           {
             src: "Business/Acrux/favicon_io/android-chrome-512x512.png",
