@@ -29,7 +29,7 @@ function HeaderComponent({ Redux, LogoutAPICall }) {
   return (
     Redux.state.RequiredObject?.Loading ? null :
     <React.Fragment>
-      <header className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-[#ACC7B4]/60 dark:supports-[backdrop-filter]:bg-[#331B3F]/60 text-[#331B3F] dark:text-[#ACC7B4]">
+      <header className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-[#C7D3D4]/60 dark:supports-[backdrop-filter]:bg-[#603F83]/60 text-[#603F83] dark:text-[#C7D3D4]">
         <div className="container flex h-14 max-w-screen-2xl items-center">
           <DesktopNav />
           <MobileNav ReduxUltimate={Redux} />

@@ -27,8 +27,8 @@ function BranchSectionComponent({ Redux }) {
                   key={index}
                   className={`hover:cursor-pointer uppercase sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none tracking-wider
                     ${activeBranchGroup === each.title ? 
-                      "bg-[#331B3F] dark:bg-[#ACC7B4] text-[#ACC7B4] dark:text-[#331B3F] border-[#ACC7B4] dark:border-[#331B3F] rounded-t" : 
-                      "border-[#331B3F] dark:border-[#ACC7B4]"}
+                      "bg-[#603F83] dark:bg-[#C7D3D4] text-[#C7D3D4] dark:text-[#603F83] border-[#C7D3D4] dark:border-[#603F83] rounded-t" : 
+                      "border-[#603F83] dark:border-[#C7D3D4]"}
                   `}
                   onClick={() => setActiveBranchGroup(each?.title)}
                 >
@@ -37,13 +37,13 @@ function BranchSectionComponent({ Redux }) {
                   </svg>{each.title}
                 </a>
               )) }
-              <ScrollBar orientation="horizontal" className="bg-[#331B3F] dark:bg-[#ACC7B4]" />
+              <ScrollBar orientation="horizontal" className="bg-[#603F83] dark:bg-[#C7D3D4]" />
             </ScrollArea>
           </div>
           
           {Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve?.subBranches?.map((each, index) => (
             <React.Fragment key={index}>
-              <div className={`flex flex-wrap text-center bg-[#331B3F] dark:bg-[#ACC7B4] text-[#ACC7B4] dark:text-[#331B3F] bg-opacity-60 px-4 py-6 rounded-lg ${activeBranchGroup === each.title ? "" : "hidden"}`}>
+              <div className={`flex flex-wrap text-center bg-[#603F83] dark:bg-[#C7D3D4] text-[#C7D3D4] dark:text-[#603F83] bg-opacity-60 px-4 py-6 rounded-lg ${activeBranchGroup === each.title ? "" : "hidden"}`}>
                 <div className="flex flex-col text-center w-full">
                   <h1 className="text-xl font-medium title-font mb-4">{each.title}</h1>
                   <p className="lg:w-2/3 mx-auto leading-relaxed text-base">{each.description}</p>
@@ -51,7 +51,7 @@ function BranchSectionComponent({ Redux }) {
                 {each?.subSubBranches?.map((each1, index1) => (
                   <React.Fragment key={index1}>
                     <div className="p-4 w-full md:w-1/3 text-left">
-                      <div className="h-full bg-[#ACC7B4] dark:bg-[#331B3F] text-[#331B3F] dark:text-[#ACC7B4] rounded-lg overflow-hidden">
+                      <div className="h-full bg-[#C7D3D4] dark:bg-[#603F83] text-[#603F83] dark:text-[#C7D3D4] rounded-lg overflow-hidden">
                         <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={each1?.image?.url} alt="blog" />
                         <div className="p-6">
                           <h1 className="title-font text-lg font-medium mb-1">{each1.title}</h1>
@@ -69,7 +69,7 @@ function BranchSectionComponent({ Redux }) {
                                 </Link> 
                               ) : 
                               each2?.title === "Visit Admin" ? (
-                                <span key={index2} className="mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1 border-r-2 border-[#331B3F] dark:border-[#ACC7B4]">
+                                <span key={index2} className="mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm py-1 border-r-2 border-[#603F83] dark:border-[#C7D3D4]">
                                   <Link to={each2?.url} target="_blank" rel="noreferrer" >
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5 mr-3 cursor-pointer" viewBox="0 0 24 24">
                                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
